@@ -109,7 +109,7 @@ class ChessGUI_pygame:
 		(X,Y) = screenPositionTuple
 		row = (Y-self.boardStart_y) / self.square_size
 		col = (X-self.boardStart_x) / self.square_size
-		return (row,col)
+		return (int(row),int(col))
 		
 		
 	def Draw(self,board,highlightSquares=[]):
@@ -237,7 +237,7 @@ class ChessGUI_pygame:
 						if len(self.Rules.GetListOfValidMoves(board,currentColor,squareClicked))>0:
 							fromSquareChosen = 1
 							fromTuple = squareClicked
-					elif currentColor == 'white' and 'w' in board[r][c]:
+					elif currentColor == 'white' and 'w' in board[int(r)][int(c)]:
 						if len(self.Rules.GetListOfValidMoves(board,currentColor,squareClicked))>0:
 							fromSquareChosen = 1
 							fromTuple = squareClicked
@@ -273,10 +273,10 @@ class ChessGUI_pygame:
 
 	def GetClickedSquare(self,mouseX,mouseY):
 		#test function
-		print "User clicked screen position x =",mouseX,"y =",mouseY
+		print ("User clicked screen position x =",mouseX,"y =",mouseY)
 		(row,col) = self.ConvertToChessCoords((mouseX,mouseY))
 		if col < 8 and col >= 0 and row < 8 and row >= 0:
-			print "  Chess board units row =",row,"col =",col
+			print ("  Chess board units row =",row,"col =",col)
 
 	def TestRoutine(self):
 		#test function

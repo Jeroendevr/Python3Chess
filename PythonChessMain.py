@@ -3,7 +3,7 @@
  Project: Python Chess
  File name: PythonChessMain.py
  Description:  Chess for player vs. player, player vs. AI, or AI vs. AI.
-	Uses Tkinter to get initial game parameters.  Uses Pygame to draw the 
+	Uses tkinter to get initial game parameters.  Uses Pygame to draw the 
 	board and pieces and to get user mouse clicks.  Run with the "-h" option 
 	to get full listing of available command line flags.  
 	
@@ -41,7 +41,7 @@
    OptionParser for better command line parsing.
    
  v 0.4 - 14 April 2009.  Added better chess piece graphics from Wikimedia
-   Commons.  Added a Tkinter dialog box (ChessGameParams.py) for getting
+   Commons.  Added a tkinter dialog box (ChessGameParams.py) for getting
    the game setup parameters.  Converted to standard chess notation for 
    move reporting and added row/col labels around the board.
  
@@ -68,7 +68,7 @@ from ChessPlayer import ChessPlayer
 from ChessGUI_text import ChessGUI_text
 from ChessGUI_pygame import ChessGUI_pygame
 from ChessRules import ChessRules
-from ChessGameParams import TkinterGameSetupParams
+from ChessGameParams import tkinterGameSetupParams
 
 from optparse import OptionParser
 import time
@@ -94,7 +94,7 @@ class PythonChessMain:
 			player2Type = 'randomAI'
 			player2Color = 'black'		
 		else:
-			GameParams = TkinterGameSetupParams()
+			GameParams = tkinterGameSetupParams()
 			(player1Name, player1Color, player1Type, player2Name, player2Color, player2Type) = GameParams.GetGameSetupParams()
 
 		self.player = [0,0]
@@ -127,7 +127,7 @@ class PythonChessMain:
 		else:
 			self.AIpause = False
 			
-		#create the gui object - didn't do earlier because pygame conflicts with any gui manager (Tkinter, WxPython...)
+		#create the gui object - didn't do earlier because pygame conflicts with any gui manager (tkinter, WxPython...)
 		if options.text:
 			self.guitype = 'text'
 			self.Gui = ChessGUI_text()
