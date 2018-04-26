@@ -81,11 +81,12 @@ class ChessBoard:
 			newList.append(self.ConvertToAlgebraicNotation(square))
 		return newList
 
-	def ConvertToAlgebraicNotation(self, row, col):
+	def ConvertToAlgebraicNotation(self, row_col_tuple):
 		#Converts (row,col) to algebraic notation
 		#(row,col) format used in Python Chess code starts at (0,0) in the upper left.
 		#Algebraic notation starts in the lower left and uses "a..h" for the column.
-		return  self.ConvertToAlgebraicNotation_col(col) + self.ConvertToAlgebraicNotation_row(row)
+		return  self.ConvertToAlgebraicNotation_col(row_col_tuple[1]) + 
+        self.ConvertToAlgebraicNotation_row(row_col_tuple[0])
 	
 	def ConvertToAlgebraicNotation_row(self,row):
 		#(row,col) format used in Python Chess code starts at (0,0) in the upper left.

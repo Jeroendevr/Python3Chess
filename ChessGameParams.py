@@ -2,17 +2,17 @@
 """
  Project: Python Chess
  File name: ChessGameParams.py
- Description:  Creates a Tkinter dialog window to get game
+ Description:  Creates a tkinter dialog window to get game
 	parameters.
 	
  Copyright (C) 2009 Steve Osborne, srosborne (at) gmail.com
  http://yakinikuman.wordpress.com/
  """
 
-from Tkinter import *
-#from Tkinter import Tk,Frame,Label,Entry,Radiobutton,Button,StringVar,ANCHOR
+from tkinter import *
+#from tkinter import Tk,Frame,Label,Entry,Radiobutton,Button,StringVar,ANCHOR
 
-class TkinterGameSetupParams:
+class tkinterGameSetupParams:
 
 	def __init__(self):
 		self.root = Tk()
@@ -84,6 +84,6 @@ class TkinterGameSetupParams:
 
 if __name__ == "__main__":		
 
-	d = TkinterGameSetupParams()
+	d = tkinterGameSetupParams()
 	x = d.GetGameSetupParams()
-	print x
+	print (x)
