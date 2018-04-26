@@ -7,6 +7,7 @@
 	board and pieces and to get user mouse clicks.  Run with the "-h" option 
 	to get full listing of available command line flags.  
 	
+
  Copyright (C) 2009 Steve Osborne, srosborne (at) gmail.com
  http://yakinikuman.wordpress.com/
  *******
@@ -25,6 +26,8 @@
 
  *******
  Version history:
+     
+v 0.8 - 26 april 2018. Changed program to be able to run with the Python 3.6
 
  v 0.7 - 27 April 2009.  Dramatically lowered CPU usage by using 
    "pygame.event.wait()" rather than "pygame.event.get()" in
