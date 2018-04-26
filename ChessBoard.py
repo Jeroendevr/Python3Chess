@@ -8,8 +8,6 @@
  Copyright (C) 2009 Steve Osborne, srosborne (at) gmail.com
  http://yakinikuman.wordpress.com/
  """
- 
-import string
 
 class ChessBoard:
 	def __init__(self,setupType=0):
@@ -85,8 +83,7 @@ class ChessBoard:
 		#Converts (row,col) to algebraic notation
 		#(row,col) format used in Python Chess code starts at (0,0) in the upper left.
 		#Algebraic notation starts in the lower left and uses "a..h" for the column.
-		return  self.ConvertToAlgebraicNotation_col(row_col_tuple[1]) + 
-        self.ConvertToAlgebraicNotation_row(row_col_tuple[0])
+		return  self.ConvertToAlgebraicNotation_col(row_col_tuple[1]) + self.ConvertToAlgebraicNotation_row(row_col_tuple[0])
 	
 	def ConvertToAlgebraicNotation_row(self,row):
 		#(row,col) format used in Python Chess code starts at (0,0) in the upper left.
@@ -145,7 +142,7 @@ class ChessBoard:
 						" captures "+toPiece_fullString+" at "+self.ConvertToAlgebraicNotation(moveTuple[1])+"!"
 		
 		#capitalize first character of messageString
-		messageString = string.upper(messageString[0])+messageString[1:len(messageString)]
+		messageString = messageString[0].upper() +messageString[1:len(messageString)]
 		
 		return messageString
 
